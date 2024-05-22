@@ -1,0 +1,19 @@
+import React from 'react';
+
+const Footer: React.FC = () => {
+  return (
+    <footer className="p-4 bg-glass2 backdrop-blur-xs text-center">
+        <div className="text-xl font-bold mb-4">NARRATIVE NEST</div>
+        <div className="border-t border-brown-600 py-4">
+        <div className="text-sm mt-2">
+          &copy; 2024 <span className="mx-2">|</span> 
+          <a href="/privacy" className="text-gray-700 hover:text-gray-900">Privacy</a> 
+          <span className="mx-2">|</span> 
+          <a href="/terms" className="text-gray-700 hover:text-gray-900">Terms</a>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

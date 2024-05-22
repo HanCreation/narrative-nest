@@ -1,0 +1,50 @@
+/* Add these styles to App.css or index.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.material-icons {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.bg-brown-500 {
+  background-color: #6b4226; /* Adjust the brown color as needed */
+}
+
+.bg-brown-600:hover {
+  background-color: #5a3a22; /* Adjust the hover color as needed */
+}
+
+input[type="text"].text-xl.font-bold {
+  border: none;
+  outline: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background: transparent;
+}
+
+input[type="text"].text-xl.font-bold::placeholder {
+  color: #333; /* Placeholder color */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.bg-cover {
+  backdrop-filter: blur(10px);
+}
