@@ -1,17 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const HeaderVariant: React.FC = () => {
+const Header: React.FC = () => {
   return (
-    <header className="p-4 bg-white shadow-md flex items-center justify-center relative">
+    <header className="p-4 bg-glass2 shadow-md flex items-center relative">
       <div className="absolute left-4">
-        <img src="/Logo.png" alt="Narrative Nest Logo" className="h-8" />
+        <Link to="/">
+          <img src="/Logo.png" alt="Narrative Nest Logo" className="h-8" />
+        </Link>
       </div>
-      <div className="text-xl font-bold text-center text-brown-600">
+      <div className="mx-auto text-xl font-bold text-center text-brown-600">
         NARRATIVE NEST
       </div>
-      
+
     </header>
   );
 };
 
-export default HeaderVariant;
+export default Header;

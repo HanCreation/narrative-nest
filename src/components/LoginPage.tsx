@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import Header3 from './Header3';
 const LoginPage: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/Background.png')` }}>
+      <Helmet>
+        <title>Login - Narrative Nest</title>
+      </Helmet>
       <Header3 />
       <main className="flex-grow flex items-center justify-center p-8">
         <div className="bg-white bg-opacity-25  backdrop-blur-lg p-8 rounded-2xl shadow-lg text-center max-w-sm w-full">

@@ -1,8 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from '/src/components/HomePage.tsx';
-import LoginPage from '/src/components/LoginPage';
-import Storyboard from '/src/components/Storyboard';
+import HomePage from './components/HomePage';
+import LoginPage from './components/LoginPage';
+import SignUpPage from './components/SignUpPage';
+// import History from './components/History';
+// import Create from './components/Create';
+import Storyboard from './components/Storyboard';
 
 const App: React.FC = () => {
   return (
@@ -10,6 +13,9 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/sign-up" element={<SignUpPage />} />  
+        {/* <Route path="/history" element={<History />} /> */}
+        {/* <Route path="/create" element={<Create />} /> */}
         <Route path="/storyboard" element={<Storyboard />} />
       </Routes>
     </Router>
