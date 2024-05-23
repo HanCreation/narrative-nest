@@ -1,9 +1,12 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const Footer: React.FC = () => {
   return (
     <footer className="p-4 bg-glass2 backdrop-blur-xs text-center">
-        <div className="text-xl font-bold mb-4">NARRATIVE NEST</div>
+        <div className="text-xl font-bold mb-4">
+        <Link to="/" >
+        NARRATIVE NEST
+          </Link></div>
         <div className="border-t border-brown-600 py-4">
         <div className="text-sm mt-2">
           &copy; 2024 <span className="mx-2">|</span> 

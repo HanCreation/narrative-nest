@@ -28,6 +28,7 @@
 import React, { useState } from 'react';
 import Header from './Header.tsx';
 import ImageCard from './ImageCard';
+import Footer from './Footer.tsx';
 
 const Storyboard: React.FC = () => {
   const [storyboardTitle, setStoryboardTitle] = useState("UNNAMED STORYBOARD");
@@ -58,6 +59,7 @@ const Storyboard: React.FC = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

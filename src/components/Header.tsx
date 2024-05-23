@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ initialTitle, onTitleChange }) => {
           <FontAwesomeIcon icon={faBars} size="lg" />
         </button>
       </div>
-      <div className="text-center">
+      <div className="text-center text-brown-800">
         <input
           type="text"
           value={title}

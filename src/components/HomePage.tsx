@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import Header2 from './Header2';
 import Footer from './Footer';
-
+import { Link } from 'react-router-dom';
 const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/Background.png')` }}>
@@ -14,9 +14,9 @@ const HomePage: React.FC = () => {
         <section className="text-center mb-16">
           <img src="/narrative-nest-logo.png" alt="Narrative Nest" className="mx-auto mb-10" />
           <h1 className="text-6xl font-bold mb-10 text-brown-800">Visualize It as You Narrate It</h1>
-          <button className="bg-brown-500 text-white px-6 py-2 rounded-lg text-lg font-semibold hover:bg-brown-600">
+          <Link to="/sign-up" className="bg-brown-500 text-white px-6 py-2 rounded-lg text-lg font-semibold hover:bg-brown-600">
             Get Started
-          </button>
+          </Link>
         </section>
         <section className="text-center mb-16 text-brown-800">
           <h2 className="text-4xl font-bold mb-4">Create Your Storyboard Instantly</h2>

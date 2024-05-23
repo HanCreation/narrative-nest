@@ -1,10 +1,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
+import { Link , useNavigate} from 'react-router-dom';
 import Header3 from './Header3';
 import Footer from './Footer';
 
 const SignUpPage: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Navigate directly to history page upon form submission
+    navigate('/history');
+  };
   return (
     <div className="min-h-screen flex flex-col bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/Background.png')` }}>
       <Helmet>
@@ -14,7 +21,7 @@ const SignUpPage: React.FC = () => {
       <main className="flex-grow flex items-center justify-center p-8">
         <div className="bg-glass2 bg-opacity-25 backdrop-blur-lg p-8 rounded-2xl shadow-lg text-center max-w-sm w-full">
           <h2 className="text-2xl font-bold mb-6 text-brown-800">Hello There!</h2>
-          <form>
+          <form onSubmit={handleSubmit}>
             <input
               type="email"
               placeholder="Email"
@@ -33,7 +40,7 @@ const SignUpPage: React.FC = () => {
             <div className="flex items-center mb-4">
               <input type="checkbox" id="terms" className="mr-2" />
               <label htmlFor="terms" className="text-sm text-brown-800">
-                I agree with <Link to="/terms" className="underline">Terms and Service</Link>
+                I agree with <label className="underline">Terms and Service</label>
               </label>
             </div>
             <button
