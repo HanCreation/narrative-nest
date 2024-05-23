@@ -55,7 +55,7 @@ const SignUpPage: React.FC = () => {
           </p>
         </div>
       </main>
-      <Footer />
+
     </div>
   );
 };
