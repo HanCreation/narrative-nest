@@ -74,7 +74,7 @@ npm run build
 - Integration with SDXL Lightning for generating storyboard frames.
 
 
-## Code Structure
+## Code Structure (As per initial commit by Hans)
 
 - `node_modules`: Contains all the npm packages.
 - `public`: Public assets including images.
@@ -100,3 +100,4 @@ npm run build
 
 ## API
 SDXL Lightning is used by API Call to Gradio from this Huggingface Space [SDXL Lightning by Bytedance](https://huggingface.co/spaces/ByteDance/SDXL-Lightning)
+

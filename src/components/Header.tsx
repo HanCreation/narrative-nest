@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faShareAlt } from '@fortawesome/free-solid-svg-icons';
-
+// Initial commit by Dean Hans
 interface HeaderProps {
   initialTitle: string;
   onTitleChange: (newTitle: string) => void;
