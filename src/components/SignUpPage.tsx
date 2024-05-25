@@ -1,8 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import { Link , useNavigate} from 'react-router-dom';
-import Header3 from './Header3';
-import Footer from './Footer';
+// Importing necessary page and react library
+import React from "react";
+import { Helmet } from "react-helmet";
+import { Link, useNavigate } from "react-router-dom";
+import Header3 from "./Header3";
+import Footer from "./Footer";
 
 const SignUpPage: React.FC = () => {
   const navigate = useNavigate();
@@ -10,54 +11,87 @@ const SignUpPage: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Navigate directly to history page upon form submission
-    navigate('/history');
+    navigate("/history");
   };
+
+  // Returning Sign Up Page
   return (
-    <div className="min-h-screen flex flex-col bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/Background.png')` }}>
+    //  Make the background same as the background from the assets
+    <div
+      className="min-h-screen flex flex-col bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url('/Background.png')` }}
+    >
+      {/* HELMET: manage changes to the document head in a React application. It allows
+       to set elements like the title, meta tags, and other attributes within the 
+       <head> of HTML document dynamically from React components. */}
       <Helmet>
         <title>Sign Up - Narrative Nest</title>
       </Helmet>
+
+      {/* Taking Header 3 Component */}
       <Header3 />
+
+      {/* Submission Box */}
       <main className="flex-grow flex items-center justify-center p-8">
         <div className="bg-glass2 bg-opacity-25 backdrop-blur-lg p-8 rounded-2xl shadow-lg text-center max-w-sm w-full">
-          <h2 className="text-2xl font-bold mb-6 text-brown-800">Hello There!</h2>
+          <h2 className="text-2xl font-bold mb-6 text-brown-800">
+            Hello There!
+          </h2>
+
+          {/* Calling handleSubmit Form */}
           <form onSubmit={handleSubmit}>
+            {/* User email form */}
             <input
               type="email"
               placeholder="Email"
               className="w-full p-2 mb-4 border rounded"
             />
+            {/* User Password form */}
             <input
               type="password"
               placeholder="Password"
               className="w-full p-2 mb-4 border rounded"
             />
+            {/* User Confirm Password form */}
             <input
               type="password"
               placeholder="Confirm Password"
               className="w-full p-2 mb-4 border rounded"
             />
+            {/* Term and Condition form */}
             <div className="flex items-center mb-4">
               <input type="checkbox" id="terms" className="mr-2" />
               <label htmlFor="terms" className="text-sm text-brown-800">
-                I agree with <label className="underline">Terms and Service</label>
+                I agree with{" "}
+                <label className="underline">Terms and Service</label>
               </label>
             </div>
+
+            {/* Sign in Button */}
             <button
               type="submit"
               className="w-full bg-brown-500 text-white px-4 py-2 rounded-lg hover:bg-brown-600"
             >
               Sign Up
             </button>
+
+
           </form>
           <p className="mt-4 text-sm text-brown-800">
-            You are back? <Link to="/login" className="underline hover:text-brown-600">Login</Link>
+            {/* Link to login page */}
+            You are back?{" "}
+            <Link to="/login" className="underline hover:text-brown-600">
+              Login
+            </Link>
           </p>
         </div>
       </main>
 
+      {/* Taking Footer Section */}
+      <Footer />
     </div>
   );
 };
 
+// Exporting Sign Up Page
 export default SignUpPage;
