@@ -98,14 +98,14 @@ npm run build
   - `main.tsx`: Entry point of the application.
 
 ## Documentation
-- 'first_commit` : code scratch made by Dean Hans 
+- `first_commit` : code scratch made by Dean Hans 
 - `second_commit` : Minor update on src by Dean Hans 
-- 'third_commit' : Minor update on src by Dean Hans 
-- 'fourth_commit' : Minor update on src by Dean Hans 
+- `third_commit` : Minor update on src by Dean Hans 
+- `fourth_commit` : Minor update on src by Dean Hans 
 - `fifth_commit` : Minor update on src by Dean Hans 
 - `sixth_commit` : Minor update on src by Dean Hans 
 - `seventh_commit` : link every page on src by Dean Hans
-- `eighth_commit` : Added documentation on src and documentation by Hendra
+- `eighth_commit` : Added documentation on src, footer in LoginPage and SignupPage, and updating Readme by Hendra
 
 ## API
 SDXL Lightning is used by API Call to Gradio from this Huggingface Space [SDXL Lightning by Bytedance](https://huggingface.co/spaces/ByteDance/SDXL-Lightning)
