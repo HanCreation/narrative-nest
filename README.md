@@ -4,13 +4,66 @@
 Narrative-Nest is an app designed to make process of creating storyboards easier and faster. Users can prompt an AI to generate storyboard frames using SDXL Lightning API, making storyboard creation quick and efficient.
 
 ## Table of Contents
+
+- [Description](#description)
 - [Prerequisites](#prerequisites)
 - [Contributing](#contributing)
-- [Installation for usage](#installation-for-usage)
+- [Installation for Usage](#installation-for-usage)
 - [Usage](#usage)
 - [Features](#features)
 - [Code Structure](#code-structure)
+- [Documentation](#documentation)
 - [API](#api)
+
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+1. **Node.js**: Install the latest LTS version of Node.js from [nodejs.org](https://nodejs.org/).
+2. **Package Manager**: It's recommended to use npm, which comes with Node.js, but you can also use yarn if you prefer.
+3. **Git**: Install Git from [git-scm.com](https://git-scm.com/).
+4. **Code Editor**: Install a code editor like [Visual Studio Code](https://code.visualstudio.com/).
+
+## Contributing
+
+Steps to contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Navigate to the project directory in the command prompt.
+4. Install dependencies:
+   ```sh
+   npm install
+   ```
+5. Run the application locally:
+   ```sh
+   npm run dev
+   ```
+6. Commit your changes (`git commit -m 'Add some feature'`).
+7. Push to the branch (`git push origin feature/your-feature`).
+8. Open a Pull Request.
+
+## Installation for usage
+
+1. Clone the repository in your Command Prompt:
+   ```sh
+   git clone https://github.com/your-username/narrative-nest.git
+   ```
+
+2. Navigate to the project directory:
+   ```sh
+   cd narrative-nest
+   ```
+
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+
+## Usage
+
+To run the project, use the following command:
 
 ## Prerequisites
 
