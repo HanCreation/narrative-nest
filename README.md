@@ -127,8 +127,8 @@ npm run build
 - Integration with SDXL Lightning for generating storyboard frames.
 
 
-## Code Structure (As per initial commit by Hans)
-
+## Code Structure
+As per initial commit by Hans:
 - `node_modules`: Contains all the npm packages.
 - `public`: Public assets including images.
 - `src`: Source code directory.
