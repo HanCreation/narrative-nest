@@ -10,6 +10,8 @@ const SignUpPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Dummy function to navigate to history page, without any logic
+    // Signup Logic to be added in the future if possible
     // Navigate directly to history page upon form submission
     navigate("/history");
   };
