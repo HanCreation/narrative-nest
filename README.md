@@ -9,7 +9,7 @@ Narrative-Nest is an app designed to make process of creating storyboards easier
 - [Installation for usage](#installation-for-usage)
 - [Usage](#usage)
 - [Features](#features)
-- [Code Structure](#code-structure)
+- [Code Structure](#code Structure-(As per initial commit by Hans))
 - [Documentation](#documentation)
 - [API](#api)
 
