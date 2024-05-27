@@ -97,7 +97,7 @@ Steps to contribute:
 
 1. Clone the repository in your Command Prompt:
    ```sh
-   git clone https://github.com/your-username/narrative-nest.git
+   git clone https://github.com/HanCreation/narrative-nest.git
    ```
 
 2. Navigate to the project directory:
