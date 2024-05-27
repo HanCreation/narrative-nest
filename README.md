@@ -106,7 +106,7 @@ As per initial commit by Hans:
 - `fifth_commit` : Minor update on src by Dean Hans 
 - `sixth_commit` : Minor update on src by Dean Hans 
 - `seventh_commit` : link every page on src by Dean Hans
-- `eighth_commit` : Added documentation on src, footer in LoginPage and SignupPage, and updating Readme by Hendra
+- `eighth_commit` : Added documentation on src, footer in LoginPage and SignupPage, and updating Readme by Hendra & Wilson
 
 ## API
 SDXL Lightning is used by API Call to Gradio from this Huggingface Space [SDXL Lightning by Bytedance](https://huggingface.co/spaces/ByteDance/SDXL-Lightning)
