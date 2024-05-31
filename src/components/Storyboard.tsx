@@ -4,11 +4,14 @@ import Header from "./Header.tsx";
 import ImageCard from "./ImageCard";
 import Footer from "./Footer.tsx";
 import { Helmet } from "react-helmet";
+import { useUser } from "../contexts/user-context.tsx";
 
 const Storyboard: React.FC = () => {
   // Set Initial Storyboard Title and Base Prompt
   const [storyboardTitle, setStoryboardTitle] = useState("UNNAMED STORYBOARD");
   const [basePrompt, setBasePrompt] = useState("");
+
+  const user = useUser();
 
   // Change Storyboard Title Function
   const handleTitleChange = (newTitle: string) => {

@@ -1,18 +1,36 @@
 // Importing necessary page and react library
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link, useNavigate } from "react-router-dom";
 import Header3 from "./Header3";
 import Footer from "./Footer";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase/firebase-config";
 
 const SignUpPage: React.FC = () => {
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [userEmail, setUserEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Dummy function to navigate to history page, without any logic
     // Signup Logic to be added in the future if possible
     // Navigate directly to history page upon form submission
+    // navigate("/history");
+
+    if(password === "" || confirmPassword === "" || userEmail === "") {
+      alert("Empty fileds");
+    }
+
+    if(password !== confirmPassword) {
+      alert("Password does not match");
+    }
+
+    let creds : any = await createUserWithEmailAndPassword(auth, userEmail, password)
+      .catch(err => { alert("Error creating user")})
     navigate("/history");
   };
 
@@ -47,18 +65,24 @@ const SignUpPage: React.FC = () => {
               type="email"
               placeholder="Email"
               className="w-full p-2 mb-4 border rounded"
+              value={userEmail}
+              onChange={(e) => setUserEmail(e.target.value)}
             />
             {/* User Password form */}
             <input
               type="password"
               placeholder="Password"
               className="w-full p-2 mb-4 border rounded"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
             {/* User Confirm Password form */}
             <input
               type="password"
               placeholder="Confirm Password"
               className="w-full p-2 mb-4 border rounded"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
             />
             {/* Term and Condition form */}
             <div className="flex items-center mb-4">
@@ -76,8 +100,6 @@ const SignUpPage: React.FC = () => {
             >
               Sign Up
             </button>
-
-
           </form>
           <p className="mt-4 text-sm text-brown-800">
             {/* Link to login page */}
