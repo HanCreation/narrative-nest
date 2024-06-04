@@ -97,6 +97,8 @@ As per initial commit by Hans:
   - `App.tsx`: Main App component.
   - `index.css`: Additional global styles.
   - `main.tsx`: Entry point of the application.
+  - `user-context.tsx`: Provides a React Context for managing and accessing user authentication state within a React application. This context utilizes Firebase Authentication to track the user's login status and makes the user information available throughout the component tree.
+  - `firebase-config.tsx`: Initializing and configuring Firebase services within the application. This includes setting up Firebase Authentication and Firestore for database operations.
 
 ## Documentation
 - `first_commit` : code scratch made by Dean Hans 
@@ -107,6 +109,7 @@ As per initial commit by Hans:
 - `sixth_commit` : Minor update on src by Dean Hans 
 - `seventh_commit` : link every page on src by Dean Hans
 - `eighth_commit` : Added documentation on src, footer in LoginPage and SignupPage, and updating Readme by Hendra & Wilson
+- `ninth_commit` : Firebase setup and integration, updated History.tsx, view history, signup, and login
 
 ## API
 SDXL Lightning is used by API Call to Gradio from this Huggingface Space [SDXL Lightning by Bytedance](https://huggingface.co/spaces/ByteDance/SDXL-Lightning)
