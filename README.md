@@ -1,6 +1,7 @@
 # Narrative-Nest
 
 ## Description
+
 Narrative-Nest is an app designed to make process of creating storyboards easier and faster. Users can prompt an AI to generate storyboard frames using SDXL Lightning API, making storyboard creation quick and efficient.
 
 ## Table of Contents
@@ -14,7 +15,6 @@ Narrative-Nest is an app designed to make process of creating storyboards easier
 - [Code Structure](#code-structure)
 - [Documentation](#documentation)
 - [API](#api)
-
 
 ## Prerequisites
 
@@ -44,15 +44,16 @@ Steps to contribute:
 7. Push to the branch (`git push origin feature/your-feature`).
 8. Open a Pull Request.
 
-
 ## Installation for usage
 
 1. Clone the repository in your Command Prompt:
+
    ```sh
    git clone https://github.com/HanCreation/narrative-nest.git
    ```
 
 2. Navigate to the project directory:
+
    ```sh
    cd narrative-nest
    ```
@@ -65,18 +66,20 @@ Steps to contribute:
 ## Usage
 
 To run the project, use the following command:
+
 ```sh
 npm run dev
 ```
 
-
 ## Features
+
 - Users can prompt the AI to create storyboard frames.
 - Integration with SDXL Lightning for generating storyboard frames.
 
-
 ## Code Structure
+
 As per initial commit by Hans:
+
 - `node_modules`: Contains all the npm packages.
 - `public`: Public assets including images.
 - `src`: Source code directory.
@@ -101,16 +104,18 @@ As per initial commit by Hans:
   - `firebase-config.tsx`: Initializing and configuring Firebase services within the application. This includes setting up Firebase Authentication and Firestore for database operations.
 
 ## Documentation
-- `first_commit` : code scratch made by Dean Hans 
-- `second_commit` : Minor update on src by Dean Hans 
-- `third_commit` : Minor update on src by Dean Hans 
-- `fourth_commit` : Minor update on src by Dean Hans 
-- `fifth_commit` : Minor update on src by Dean Hans 
-- `sixth_commit` : Minor update on src by Dean Hans 
+
+- `first_commit` : code scratch made by Dean Hans
+- `second_commit` : Minor update on src by Dean Hans
+- `third_commit` : Minor update on src by Dean Hans
+- `fourth_commit` : Minor update on src by Dean Hans
+- `fifth_commit` : Minor update on src by Dean Hans
+- `sixth_commit` : Minor update on src by Dean Hans
 - `seventh_commit` : link every page on src by Dean Hans
 - `eighth_commit` : Added documentation on src, footer in LoginPage and SignupPage, and updating Readme by Hendra & Wilson
 - `ninth_commit` : Firebase setup and integration, updated History.tsx, view history, signup, and login
+- `tenth_commit` : Sign up bug fix
 
 ## API
-SDXL Lightning is used by API Call to Gradio from this Huggingface Space [SDXL Lightning by Bytedance](https://huggingface.co/spaces/ByteDance/SDXL-Lightning)
 
+SDXL Lightning is used by API Call to Gradio from this Huggingface Space [SDXL Lightning by Bytedance](https://huggingface.co/spaces/ByteDance/SDXL-Lightning)

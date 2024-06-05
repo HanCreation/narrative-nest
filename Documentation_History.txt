@@ -1,0 +1,152 @@
+Sure! Here's a detailed documentation for the `HistoryPage` component:
+
+---
+
+## HistoryPage Component
+
+The `HistoryPage` component is a React functional component that displays the user's storyboards. It retrieves the storyboards from a Firestore database and dynamically updates the page to reflect any changes in real-time.
+
+### Import Statements
+
+```javascript
+import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
+import Footer from "./Footer";
+import HeaderStory from "./HeaderStory";
+import { StoryBoard } from "../lib/types/story-board";
+import { useUser } from "../contexts/user-context";
+import { collection, onSnapshot, query, where } from "firebase/firestore";
+import { db } from "../firebase/firebase-config";
+```
+
+### State and Context
+
+- **State:**
+  - `boards`: An array of `StoryBoard` objects representing the user's storyboards.
+  - `setBoards`: A function to update the `boards` state.
+
+- **Context:**
+  - `useUser`: Custom hook to get the current user context.
+
+### useEffect Hook
+
+The `useEffect` hook is used to set up a Firestore subscription to listen for real-time updates to the user's storyboards. When the component mounts, it sets up a query to retrieve storyboards where the `uid` matches the current user's `uid`. If the user context is not null, it subscribes to updates using `onSnapshot`. The subscription is cleaned up when the component unmounts.
+
+### Component Structure
+
+#### JSX Structure
+
+- **Helmet:** Used to set the document head properties, like the page title.
+- **HeaderStory:** A custom header component for the storyboards.
+- **Main Content:**
+  - **Conditional Rendering:** 
+    - If `boards` is empty, a message and a link to create a new storyboard are displayed.
+    - If `boards` is not empty, a grid of storyboard cards is displayed.
+- **Footer:** A custom footer component.
+
+### Styling
+
+The component uses Tailwind CSS classes for styling. It includes styles for layout, typography, and UI components like buttons and grids.
+
+### Detailed Code
+
+```jsx
+const HistoryPage: React.FC = () => {
+  const [boards, setBoards] = useState<StoryBoard[]>([]);
+  const user = useUser();
+
+  useEffect(() => {
+    let unsubscribeFirestore = () => {};
+    if (user !== null) {
+      const q = query(
+        collection(db, "StoryBoards"),
+        where("uid", "==", user.uid)
+      );
+      unsubscribeFirestore = onSnapshot(q, (querySnapshot) => {
+        const storyBoards: StoryBoard[] = [];
+        querySnapshot.forEach((doc) => {
+          storyBoards.push(doc.data() as StoryBoard);
+        });
+        setBoards(storyBoards);
+      });
+    }
+
+    return () => {
+      unsubscribeFirestore();
+    };
+  }, [user]);
+
+  return (
+    <div
+      className="min-h-screen flex flex-col bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url('/Background.png')` }}
+    >
+      <Helmet>
+        <title>History - Narrative Nest</title>
+      </Helmet>
+
+      <HeaderStory />
+
+      <main className="flex-grow flex flex-col items-center justify-center p-8">
+        <h2 className="text-5xl font-bold mb-10 text-brown-800">
+          Your Storyboards
+        </h2>
+
+        {boards.length === 0 ? (
+          <div className="border-t border-brown-600 py-24">
+            <div className="flex flex-col items-center mb-10">
+              <img
+                src="/EmptyHistory3.png"
+                alt="Empty History"
+                className="w-48 mb-4"
+              />
+              <p className="text-lg text-center text-brown-800 mb-4">
+                No storyboards yet! Click 'New Storyboard' to start visualize
+                your story.
+              </p>
+
+              <Link
+                to="/storyboard"
+                className="bg-brown-500 text-white px-6 py-2 rounded-lg text-lg font-semibold hover:bg-brown-600"
+              >
+                New Storyboard
+              </Link>
+            </div>
+          </div>
+        ) : (
+          <div className="grid grid-cols-4 gap-6">
+            {boards.map((board: StoryBoard, index: number) => (
+              <div className="flex flex-col p-4 bg-white bg-opacity-50 rounded-xl" key={index}>
+                <img src={board.image} alt="Storyboard" />
+                <p className="text-sm mt-6 text-neutral-700">{board.basePrompt}</p>
+                <h1>{board.prompt}</h1>
+                <p className="mt-10">{board.notes}</p>
+              </div>
+            ))}
+          </div>
+        )}
+      </main>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default HistoryPage;
+```
+
+### Key Points
+
+1. **Dynamic Data Fetching:** The component fetches and displays storyboards dynamically based on the user's UID.
+2. **Conditional Rendering:** The UI conditionally displays a message when there are no storyboards.
+3. **Real-time Updates:** The `onSnapshot` method ensures the storyboards are updated in real-time whenever there are changes in the Firestore collection.
+4. **Styling:** Tailwind CSS is used for styling the components, ensuring a responsive and modern UI.
+
+### Dependencies
+
+- **React:** For creating the component.
+- **React Helmet:** For managing changes to the document head.
+- **React Router:** For navigation links.
+- **Firebase Firestore:** For real-time database operations.
+- **User Context:** Custom context to get the current user information.
