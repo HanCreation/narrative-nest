@@ -25,7 +25,7 @@ Before you begin, ensure you have met the following requirements:
 3. **Git**: Install Git from [git-scm.com](https://git-scm.com/).
 4. **Code Editor**: Install a code editor like [Visual Studio Code](https://code.visualstudio.com/).
 
-## Contributing
+<!-- ## Contributing
 
 Steps to contribute:
 
@@ -42,7 +42,7 @@ Steps to contribute:
    ```
 6. Commit your changes (`git commit -m 'Add some feature'`).
 7. Push to the branch (`git push origin feature/your-feature`).
-8. Open a Pull Request.
+8. Open a Pull Request. -->
 
 ## Installation for usage
 
