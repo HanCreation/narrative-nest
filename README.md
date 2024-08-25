@@ -13,7 +13,6 @@ Watch On [Youtube!](https://youtu.be/kGh9TZgXx-k)
 
 - [Description](#description)
 - [Prerequisites](#prerequisites)
-- [Contributing](#contributing)
 - [Installation for Usage](#installation-for-usage)
 - [Usage](#usage)
 - [Features](#features)
