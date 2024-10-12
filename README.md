@@ -4,6 +4,8 @@
 
 Narrative-Nest is an app designed to make process of creating storyboards easier and faster. Users can prompt an AI to generate storyboard frames using SDXL Lightning API, making storyboard creation quick and efficient.
 
+Concept UI for this webapp = https://www.figma.com/proto/sDrI4eouGpVinfrlXgrcFn/AOL-Software-Engineer?page-id=51%3A3597&node-id=172-940&t=ueraLU2NZmccJ6gt-1
+
 ## Main Feature Demo Video
 Watch On [Youtube!](https://youtu.be/kGh9TZgXx-k)
 
